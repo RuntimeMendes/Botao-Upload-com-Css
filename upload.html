@@ -1,0 +1,61 @@
+<style>
+input[type='file'] {
+  display: none
+}
+
+.input-wrapper label {
+  background-color: #3498db;
+  border-radius: 5px;
+  color: #fff;
+  margin: 10px;
+  padding: 6px 20px
+}
+
+.input-wrapper label:hover {
+  background-color: #2980b9
+}
+
+
+</style>
+
+
+
+
+
+<!DOCTYPE html>
+        <html>
+          <head>
+                  <meta charset="utf-8">
+     <title>Style file Upload</title>
+        </head>
+     <body>             
+             
+        <div class='input-wrapper'>
+
+            <label for='strArquivoAnexo'>
+                    Selecionar  arquivo
+            </label>
+            <input id='strArquivoAnexo' type='file' value=''/>
+            <div class="clear"></div>
+
+                    <input type="hidden" id="strNomeArquivoAnexo"                                       name="strNomeArquivoAnexo">
+                    <input type="hidden" id="strCaminhoArquivoAnexo"                                 name="strCaminhoArquivoAnexo">
+                    <span id='file-name'></span>
+
+                    </div>
+            
+         </body>
+            
+    </html>
+
+    <script>
+    
+    var $input    = document.getElementById('strArquivoAnexo'),
+          $fileName = document.getElementById('file-name');
+        $input.addEventListener('change', function(){
+        $fileName.textContent = this.value;
+        });         
+    
+    
+    
+    </script>
